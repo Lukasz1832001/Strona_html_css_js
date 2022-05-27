@@ -1,0 +1,162 @@
+:root {
+    --blue: rgb(0, 153, 255);
+    --lightblue: rgb(180, 237, 255, 0.5);
+    --lightgrey: rgb(236, 236, 236);
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--lightblue);
+}
+#loginSection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;   
+    padding: 50px;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+input {
+    border: none;
+    border-bottom: 2px solid var(--lightgrey);
+    width: 15em;
+}
+
+input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1em;
+    margin: 1em;
+    padding: .5em;
+    outline: var(--blue);
+    color: var(--blue);
+}
+
+input:focus {
+    border-bottom: 2px solid var(--blue);
+}
+
+input:focus::placeholder {
+    color: var(--blue);
+}
+
+input::placeholder{
+    color: lightsteelblue;
+}
+
+.button {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px;
+    color: #ffffff;
+    background-color: var(--blue);
+    border-radius: 7px;
+    margin: 20px;
+    border: 1px solid var(--blue);
+    transition: 0.25s;
+}
+
+.button:hover {
+    color: var(--blue);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--blue);
+    cursor: pointer;
+
+}
+
+/*Menu poziome*/
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.logo{
+    padding: 25px;
+    margin-left: 20px;
+}
+
+.navigPhone{
+    display: none;
+}
+.menuTrigger{
+    display: none;
+}
+.navig>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    list-style: none;
+}
+
+.menuItems{
+    text-decoration: none;
+    padding: 15px;
+    margin-right: 25px;
+    color: black;
+    border-bottom: 2px solid white;
+    transition: 0.3s;
+}
+.menuItems:hover{
+    color:var(--blue);
+    border-bottom: 2px solid var(--blue);
+}
+
+@media (max-width: 1000px) {
+    .navig{
+        display:none;
+    }
+    .menuTrigger{
+        display:flex;
+        margin-right: 30px;
+        padding: 15px;
+        color: black;
+        border-bottom: 2px solid white;
+    }
+    .menuTrigger:hover{
+        cursor: pointer;
+        color: var(--blue);
+        border-bottom: 2px solid var(--blue);
+    }
+    
+    .navigPhone{
+        display: none;
+        background-color: white;
+        justify-content: center;
+    }
+    .navigPhone>ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+    }
+    .navigPhone>ul>li{
+        padding: 15px;
+    }
+    .navigPhone>ul>li>a{
+        text-decoration: none;
+        color: black;
+    }
+    .listBtn{
+        padding: 15px;
+        color: black;
+        border-bottom: 2px solid white;
+        transition: 0.3s;
+    }
+    .listBtn:hover{
+        cursor: pointer;
+        color: var(--blue);
+        border-bottom: 2px solid var(--blue);       
+    }
+}
